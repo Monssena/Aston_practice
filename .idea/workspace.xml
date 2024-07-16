@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c891934-9b6b-4761-a31f-42c98d971658" name="Changes" comment="The first commit">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/practice/CustomArrayList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/practice/CustomList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/practice/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/CustomArrayListTest.java" afterDir="false" />
+    <list default="true" id="1c891934-9b6b-4761-a31f-42c98d971658" name="Changes" comment="Add hw2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/practice/hw2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/practice/hw2/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +58,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main.executor": "Run",
+    "JUnit.CustomArrayListTest.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "feature/hw2__сustomized__arraylist",
@@ -84,13 +80,13 @@
       <recent name="C:\Users\playm\IdeaProjects\Aston_practice\src\test\java" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CustomArrayListTest">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.practice.Main" />
+      <option name="MAIN_CLASS_NAME" value="org.practice.hw2.Main" />
       <module name="Aston_practice" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.practice.*" />
+          <option name="PATTERN" value="org.practice.hw2.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -109,8 +105,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CustomArrayListTest" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.CustomArrayListTest" />
       </list>
     </recent_temporary>
   </component>
@@ -145,7 +141,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720806832026</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add hw2">
+      <option name="closed" value="true" />
+      <created>1721124479503</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1721124479503</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,6 +168,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="The first commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="The first commit" />
+    <MESSAGE value="Add hw2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add hw2" />
   </component>
 </project>

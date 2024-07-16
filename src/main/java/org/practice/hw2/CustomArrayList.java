@@ -146,4 +146,9 @@ public class CustomArrayList<E> implements CustomList<E> {
 
         return size;
     }
+
+    public Object[] toArray() {
+
+        return Arrays.copyOf(array, size);
+    }
 }
