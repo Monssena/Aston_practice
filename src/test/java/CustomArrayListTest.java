@@ -1,18 +1,20 @@
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.practice.hw2.CustomArrayList;
-
-import static org.junit.Assert.*;
-
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Comparator;
+
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
 public class CustomArrayListTest {
 
     private CustomArrayList<Integer> list;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         list = new CustomArrayList<>();
     }
@@ -21,7 +23,7 @@ public class CustomArrayListTest {
     public void testAdd() {
         list.add(1);
         assertEquals(1, list.size());
-        assertEquals((Integer) 1, list.get(0));
+        assertEquals(1, list.get(0));
     }
 
     @Test
@@ -30,9 +32,9 @@ public class CustomArrayListTest {
         list.add(2);
         list.add(1, 3);
         assertEquals(3, list.size());
-        assertEquals((Integer) 1, list.get(0));
-        assertEquals((Integer) 3, list.get(1));
-        assertEquals((Integer) 2, list.get(2));
+        assertEquals(1, list.get(0));
+        assertEquals(3, list.get(1));
+        assertEquals(2, list.get(2));
     }
 
     @Test
@@ -40,9 +42,9 @@ public class CustomArrayListTest {
         Collection<Integer> collection = Arrays.asList(1, 2, 3);
         list.addAll(collection);
         assertEquals(3, list.size());
-        assertEquals((Integer) 1, list.get(0));
-        assertEquals((Integer) 2, list.get(1));
-        assertEquals((Integer) 3, list.get(2));
+        assertEquals(1, list.get(0));
+        assertEquals(2, list.get(1));
+        assertEquals(3, list.get(2));
     }
 
     @Test
@@ -57,13 +59,8 @@ public class CustomArrayListTest {
     @Test
     public void testGet() {
         list.add(1);
-        assertEquals((Integer) 1, list.get(0));
-        try {
-            list.get(1);
-            fail("Expected IndexOutOfBoundsException");
-        } catch (IndexOutOfBoundsException e) {
-            // expected
-        }
+        assertEquals(1, list.get(0));
+        assertThrows(IndexOutOfBoundsException.class, () -> list.get(1));
     }
 
     @Test
@@ -79,13 +76,8 @@ public class CustomArrayListTest {
         list.add(2);
         list.remove(0);
         assertEquals(1, list.size());
-        assertEquals((Integer) 2, list.get(0));
-        try {
-            list.get(1);
-            fail("Expected IndexOutOfBoundsException");
-        } catch (IndexOutOfBoundsException e) {
-            // expected
-        }
+        assertEquals(2, list.get(0));
+        assertThrows(IndexOutOfBoundsException.class, () -> list.get(1));
     }
 
     @Test
@@ -94,7 +86,7 @@ public class CustomArrayListTest {
         list.add(2);
         list.remove((Integer) 1);
         assertEquals(1, list.size());
-        assertEquals((Integer) 2, list.get(0));
+        assertEquals(2, list.get(0));
     }
 
     @Test
@@ -103,9 +95,9 @@ public class CustomArrayListTest {
         list.add(1);
         list.add(2);
         list.sort(Comparator.naturalOrder());
-        assertEquals((Integer) 1, list.get(0));
-        assertEquals((Integer) 2, list.get(1));
-        assertEquals((Integer) 3, list.get(2));
+        assertEquals(1, list.get(0));
+        assertEquals(2, list.get(1));
+        assertEquals(3, list.get(2));
     }
 
     @Test
@@ -115,33 +107,33 @@ public class CustomArrayListTest {
         }
         assertEquals(15, list.size());
         for (int i = 0; i < 15; i++) {
-            assertEquals((Integer) i, list.get(i));
+            assertEquals(i, list.get(i));
         }
     }
 
-    @Test(expected = NullPointerException.class)
+    @Test
     public void testAddNull() {
-        list.add(null);
+        assertThrows(NullPointerException.class, () -> list.add(null));
     }
 
-    @Test(expected = NullPointerException.class)
+    @Test
     public void testAddAtIndexNull() {
-        list.add(0, null);
+        assertThrows(NullPointerException.class, () -> list.add(0, null));
     }
 
-    @Test(expected = NullPointerException.class)
+    @Test
     public void testRemoveNull() {
-        list.remove(null);
+        assertThrows(NullPointerException.class, () -> list.remove(null));
     }
 
-    @Test(expected = NullPointerException.class)
+    @Test
     public void testSortNull() {
-        list.sort(null);
+        assertThrows(NullPointerException.class, () -> list.sort(null));
     }
 
-    @Test(expected = NullPointerException.class)
+    @Test
     public void testAddAllNull() {
         Collection<Integer> nullCollection = null;
-        list.addAll(nullCollection);
+        assertThrows(NullPointerException.class, () -> list.addAll(nullCollection));
     }
 }
